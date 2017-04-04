@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes" />
+  <title>好好看好好学——名言警句</title>
+  <link href="http://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+    html {
+      width: 100%;
+    }
+    body {
+      background-color: #3288b9;
+      width: 100%;
+    }
+    .row {
+      margin: 20px;
+    }
+    #app {
+      padding: 0;
+      margin: 0 auto;
+    }
+    #app blockquote {
+      min-height: 80px;
+      margin-bottom: 2em;
+      padding-bottom: 10px;
+    }
+    .thumbnail {
+      background-color: #ffffff;
+      box-shadow: 1px 1px 16px #7A7A7A;
+    }
+    .btn {
+      min-width:40px;
+    }
+    .caption {
+      padding: 20px 20px 10px 20px;
+    }
+    button {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="row">
+  <div id="app" class="col-sm-9 col-md-6">
+    <div class="thumbnail">
+      <div class="caption">
+        <blockquote>
+          <div id="message">
+            <p>{{ message.famous_saying }}</p>
+            <div class="pull-right">
+              ——{{ message.famous_name }}
+            </div>
+          </div>
+        </blockquote>
+        <p class="pull-right">
+          <button v-on:click="getApi" class="btn btn-default"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+        </p>
+        <p>
+          <button v-on:click="share('weibo')" class="btn btn-danger"><i class="fa fa-weibo"></i></button>
+          <!--<button v-on:click="share('wechat')" class="btn btn-success"><i class="fa fa-wechat"></i></button>-->
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/vue/2.2.6/vue.min.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>
