@@ -16,14 +16,14 @@ new Vue({
     // }
   },
   created: function () {
-    this.getApi();
+    this.getWord();
   },
   methods: {
     share: function (social) {
       let win = window.open(this[social], '_tab');
       win.focus();
     },
-    getApi: function () {
+    getWord: function () {
       let self = this;
       $("#message").fadeOut(50, function () {
         $.ajax({
